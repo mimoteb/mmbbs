@@ -32,10 +32,13 @@ def index():
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Server and Client Information</title>
+        <title>Reverse Proxy && Load Balance Web01, Web02, und Web03</title>
       </head>
       <body>
-        <h1>Request received successfully</h1>
+        <p>Web01: 192.168.199.101</p>
+        <p>Web02: 192.168.199.102</p>
+        <p>Web03: 192.168.199.103</p>
+        <p>Reverse Proxy Server: 192.168.199.100<p>
         <p>Antwort Vom Server IP: {{ server_ip }}</p>
       </body>
     </html>
