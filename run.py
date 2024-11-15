@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template_string
+from flask import Flask, request, render_template_string, response
 import socket
 import os
 
@@ -34,7 +34,11 @@ def index():
     </html>
     """
 
-    return render_template_string(html_template, server_ip=server_ip, col=col)
+    response = render_template_string(html_template, server_ip=server_ip, color=col)
+    custom_response = app.make_response(response)
+    headers = {'Custom-Header': 'Some words header'}
+    custom_response.headers['WEB-SERVEr'] = server_ip
+    return custom_response
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
