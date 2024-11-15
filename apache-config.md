@@ -1,4 +1,5 @@
-root@proxy:/etc/apache2/sites-enabled# cat 000-default.conf 
+### Apache Config - Datei für Load Balancing
+`root@proxy:/etc/apache2/sites-enabled# cat 000-default.conf `
 ```
 <VirtualHost *:80>
    ServerName example.com
