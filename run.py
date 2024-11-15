@@ -37,7 +37,6 @@ def index():
       <body>
         <h1>Request received successfully</h1>
         <p>Antwort Vom Server IP: {{ server_ip }}</p>
-        <p>Client IP: {{ client_ip }}</p>
       </body>
     </html>
     """
