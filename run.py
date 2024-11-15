@@ -35,11 +35,12 @@ def index():
         <title>Reverse Proxy && Load Balance Web01, Web02, und Web03</title>
       </head>
       <body>
+        <h1><p>Antwort Vom Server IP: {{ server_ip }}</p></h1>
         <p>Web01: 192.168.199.101</p>
         <p>Web02: 192.168.199.102</p>
         <p>Web03: 192.168.199.103</p>
         <p>Reverse Proxy Server: 192.168.199.100<p>
-        <p>Antwort Vom Server IP: {{ server_ip }}</p>
+        
       </body>
     </html>
     """
