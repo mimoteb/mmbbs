@@ -10,11 +10,11 @@ def index():
     # Determine color based on server IP
     col = ""
     if str(server_ip).endswith("101"):
-        col = 'lightyellow'
+        col = 'yellow'
     elif str(server_ip).endswith("102"):
         col = 'blue'
     elif str(server_ip).endswith("103"):
-        col = 'lightgreen'
+        col = 'green'
     html_template = """
     <!doctype html>
     <html lang="en">
