@@ -6,26 +6,8 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    # Get client IP
-    client_ip = request.remote_addr
-    
-    # Get server IP (the IP of the machine running this Flask app, specifically eth0 interface)
-    server_ip = os.popen('ip -4 addr show eth0 | grep -oP "(?<=inet\s)\d+(\.\d+){3}"').read().strip()
     server_ip = (([ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if not ip.startswith("127.")] or [[(s.connect(("8.8.8.8", 53)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1]]) + ["no IP found"])[0]
-    # Collect request data
-    request_data = {
-        'method': request.method,
-        'headers': dict(request.headers),
-        'args': request.args,
-        'form': request.form,
-        'json': request.get_json(silent=True),
-        'client_ip': client_ip
-    }
 
-    # Log request data
-    app.logger.info(f"Request Data: {request_data}")
-
-    # Render HTML template with server and client IPs
     html_template = """
     <!doctype html>
     <html lang="en">
@@ -45,7 +27,7 @@ def index():
     </html>
     """
 
-    return render_template_string(html_template, server_ip=server_ip, client_ip=client_ip)
+    return render_template_string(html_template, server_ip=server_ip)
 
 if __name__ == '__main__':
     # Run the app on port 5000 (commonly used for Flask apps)
