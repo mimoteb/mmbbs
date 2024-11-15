@@ -10,7 +10,7 @@ def index():
     # Determine color based on server IP
     col = ""
     if str(server_ip).endswith("101"):
-        col = 'yellow'
+        col = 'lightyellow'
     elif str(server_ip).endswith("102"):
         col = 'blue'
     elif str(server_ip).endswith("103"):
