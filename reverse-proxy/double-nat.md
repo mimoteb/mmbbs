@@ -17,7 +17,8 @@ incoming packets via wlan0 should forwarded as following:
 
 Both firewalls (host machine and the virtualized firewall) should be able to 
 handle the packets coming in wlan0 to their destination vms and proper ports.
-
+host machine (dhcp) ip address is : 172.20.157.177/16
+firewall (bridged) eth0 ip address is : 172.20.183.107/16
 # Double NAT
 ### First phase of NAT (packets hitting external physicall iface i.e. wlan0)
 ```
