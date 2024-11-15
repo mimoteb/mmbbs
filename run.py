@@ -34,10 +34,10 @@ def index():
     </html>
     """
 
-    response = render_template_string(html_template, server_ip=server_ip, color=col)
+    response = render_template_string(html_template, server_ip=server_ip, col=col)
     custom_response = app.make_response(response)
     headers = {'Custom-Header': 'Some words header'}
-    custom_response.headers['WEB-SERVEr'] = server_ip
+    custom_response.headers['WEB-SERVER'] = server_ip
     return custom_response
 
 if __name__ == '__main__':
