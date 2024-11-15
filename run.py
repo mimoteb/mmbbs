@@ -33,11 +33,11 @@ def index():
       </head>
       <body>
         <h1><span>Antwort Vom Server IP: {{ server_ip }}</span></h1>
-        <h2>Web01: 192.168.199.101</h2>
-        <h2>Web02: 192.168.199.102</h2>
-        <h2>Web03: 192.168.199.103</h2>
         <h2>Reverse Proxy Server: 192.168.199.100<h2>
-        
+        <h2>Web01: http://192.168.199.101:5000</h2>
+        <h2>Web02: http://192.168.199.102:5000</h2>
+        <h2>Web03: http://192.168.199.103:5000</h2>
+        <h2>Externe Zugriff https://LAPTOP-IP:444/</h2>
       </body>
     </html>
     """
