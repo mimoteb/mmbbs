@@ -14,7 +14,7 @@ def index():
     elif str(server_ip).endswith("102"):
         col = 'blue'
     elif str(server_ip).endswith("103"):
-        col = 'green'
+        col = 'lightgreen'
     html_template = """
     <!doctype html>
     <html lang="en">
