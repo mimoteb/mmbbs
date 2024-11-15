@@ -23,8 +23,8 @@ def index():
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Reverse Proxy && Load Balance Web01, Web02, und Web03</title>
       </head>
-      <body>
-        <h1><p class="{{col}}">Antwort Vom Server IP: {{ server_ip }}</p></h1>
+      <body bgcolor={{col}}>
+        <h1><p>Antwort Vom Server IP: {{ server_ip }}</p></h1>
         <p>Web01: 192.168.199.101</p>
         <p>Web02: 192.168.199.102</p>
         <p>Web03: 192.168.199.103</p>
