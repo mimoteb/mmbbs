@@ -37,7 +37,8 @@ def index():
         <h2>Web01: http://192.168.199.101:5000</h2>
         <h2>Web02: http://192.168.199.102:5000</h2>
         <h2>Web03: http://192.168.199.103:5000</h2>
-        <h2>Externe Zugriff https://LAPTOP-IP:444/</h2>
+        <h2>Externe Zugriff https://LAPTOP-VM-FW-IP:444/</h2>
+        <h2>Proxy Server akzeptiert nur sichere Protokolle HTTPS/SSH</h2>
       </body>
     </html>
     """
