@@ -1,6 +1,5 @@
-from flask import Flask, request, render_template_string
+from flask import Flask, render_template_string
 import socket
-import os
 
 app = Flask(__name__)
 
