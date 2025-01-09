@@ -6,7 +6,7 @@
    # Enable proxy and load balancing
    ProxyRequests Off
    ProxyPreserveHost On
-   # Define backend Flask application servers with round-robin
+   # backend Flask-backend application servers with **round-robin**
 <Proxy "balancer://flaskcluster">
        BalancerMember http://192.168.199.101:5000
        BalancerMember http://192.168.199.102:5000
